@@ -1,0 +1,128 @@
+body {
+    background-color: black; /* Fundo preto */
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: white; /* Texto branco */
+}
+
+.card {
+    perspective: 1000px; /* Perspectiva para o efeito 3D */
+}
+
+.card-inner {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid white; /* Contorno branco */
+    border-radius: 15px;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    color: white; /* Texto branco */
+    text-align: center; /* Centraliza o texto */
+}
+
+.card-front {
+    background-color: #222; /* Cor escura para a frente da carta */
+    transform: rotateY(180deg); /* Começa virada */
+}
+
+.card-back {
+    background-color: #444; /* Cor da parte de trás */
+}
+
+.card-image {
+    width: 70%; /* Ajusta a largura da imagem */
+    height: auto;
+    margin: 10px 0; /* Margem para separar a imagem do texto */
+}
+
+.card-text {
+    font-size: 16px; /* Diminui o tamanho da fonte */
+    width: 80%; /* Limita a largura do texto */
+    text-align: justify; /* Justifica o texto */
+}
+
+.card-back-text {
+    font-size: 20px; /* Tamanho do texto na parte de trás */
+}
+
+.problem-label {
+    font-size: 18px; /* Tamanho do rótulo "PROBLEMA" */
+    margin-bottom: 5px; /* Margem abaixo do rótulo */
+}
+
+.options-container {
+    margin-top: 20px; /* Espaço acima das opções */
+}
+
+button {
+    background-color: #333; /* Fundo escuro para os botões */
+    border: 2px solid white; /* Contorno branco */
+    color: white; /* Texto branco */
+    font-size: 16px; /* Tamanho da fonte dos botões */
+    padding: 10px; /* Espaçamento interno */
+    margin: 5px; /* Margem entre os botões */
+    width: 150px; /* Largura fixa dos botões */
+    cursor: pointer; /* Cursor pointer ao passar sobre os botões */
+}
+
+button:hover {
+    background-color: #444; /* Fundo mais claro ao passar o mouse */
+}
+
+.message {
+    margin-top: 10px; /* Espaço acima da mensagem */
+    color: white; /* Texto branco */
+    font-size: 16px; /* Tamanho da fonte da mensagem */
+}
+
+/* Estilo do modal */
+#modal {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente */
+    color: white; /* Texto branco */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    z-index: 1000; /* Fica acima de outros elementos */
+}
+
+#modal-message {
+    background-color: #222; /* Fundo escuro para a mensagem do modal */
+    border: 2px solid white; /* Contorno branco */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto no modal */
+}
+
+#close-modal {
+    margin-top: 10px; /* Margem acima do botão de fechar */
+    background-color: #333; /* Fundo escuro para o botão de fechar */
+    border: 2px solid white; /* Contorno branco */
+    color: white; /* Texto branco */
+    padding: 10px; /* Espaçamento interno */
+    cursor: pointer; /* Cursor pointer ao passar sobre o botão */
+}
+
+#close-modal:hover {
+    background-color: #444; /* Fundo mais claro ao passar o mouse */
+}
